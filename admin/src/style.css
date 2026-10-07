@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #172033;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+
+.sidebar {
+  background: #111827;
+  color: white;
+  padding: 28px 22px;
+}
+
+.sidebar h2 {
+  margin: 0;
+}
+
+.sidebar p {
+  color: #94a3b8;
+}
+
+.sidebar nav {
+  margin-top: 35px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #e2e8f0;
+  padding: 11px 12px;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background: #1f2937;
+}
+
+.content {
+  padding: 40px;
+  max-width: 1200px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 1.4px;
+}
+
+.content h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 220px;
+  margin: 28px 0;
+}
+
+.stat-card,
+.panel {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+}
+
+.stat-card span {
+  color: #64748b;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.panel {
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #d6dbe5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+button.secondary {
+  background: #64748b;
+}
+
+button.edit {
+  background: #0f766e;
+}
+
+button.delete {
+  background: #dc2626;
+}
+
+.message {
+  margin-top: 14px;
+  background: #eef2ff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
